@@ -6,4 +6,4 @@ mkdir C:\agent ; cd C:\agent
 Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory("$HOME\Downloads\vsts-agent-win-x64-2.158.0.zip", "$PWD")
 
 #Configure agent
-.\config.cmd --unattended --url $url --auth pat --token $pat --pool $pool --agen $agent --acceptTeeEula --work ./_work --runAsServic
+.\config.cmd --unattended --url $1 --auth pat --token $2 --pool $3 --agent $4 --acceptTeeEula --work ./_work --runAsServic
